@@ -83,6 +83,8 @@
               <div class="card-body">
                 <h7 class="card-title">Graph Here</h7>
                 <p class="card-text">Graph Description</p>
+                <%= line_chart User.group_by_day(:created_at).count %>
+                <%= pie_chart User.group(:created_at).count %>
               </div>
             </div>
           </div>
